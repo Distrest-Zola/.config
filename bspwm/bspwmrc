@@ -48,13 +48,17 @@ bspc rulc -a Screenkey manage=off
 
 # Autostart
 colors.sh &
+
+pkill volumeicon &
 volumeicon &
+
 pulseeffects &
 xrandr --output VGA-0 --mode 1368x768
 $HOME/.config/polybar/launch.sh
 picom -f &
 wal -R &
 
+pkill dunst &
 dunst &
 sleep 0.15
 notify-send "Welcome Zola! ;)"
